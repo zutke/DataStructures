@@ -17,7 +17,7 @@ class Node
     Type data;
 public:
     Node(Type data);
-    /* Accessors
+    /*
      Type getData();
      void setData(Type data);
      */
