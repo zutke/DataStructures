@@ -30,4 +30,5 @@
 *.exe
 *.out
 *.app
-*.xcuserstate
+DataStructures/.DS_Store
+.DS_Store
