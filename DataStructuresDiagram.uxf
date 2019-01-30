@@ -55,7 +55,7 @@ bg=orange</panel_attributes>
       <x>470</x>
       <y>220</y>
       <w>410</w>
-      <h>190</h>
+      <h>230</h>
     </coordinates>
     <panel_attributes>Array&lt;Type&gt;
 --
@@ -70,6 +70,7 @@ bg=orange</panel_attributes>
 +GiveSize(Array&lt;Type&gt; array) : int
 + operator []
 + operator = Array&lt;Type&gt; &amp;
++ ~Array() : destr
 
 bg=yellow</panel_attributes>
     <additional_attributes/>
