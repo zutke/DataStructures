@@ -16,10 +16,9 @@ class Array
 {
     Type * internalArray;
     int size;
-    int GetSize()();
 public:
     Array<Type>(int size);
-    Array<Type>(const Array<Type> & toCopy);
+    Array<Type>(const Array<Type> & toCopy); // Copy another array
     ~Array<Type>();
     
     Array<Type> & operator = (const Array<Type> & toReplace);
@@ -28,8 +27,9 @@ public:
     
     void PrintValues();
     void PrintValueAtIndex(int index);
-    void AddValueAtIndex(int index, Type value);
-}
+    void setAtIndex(int index, Type value);
+    int getSize();
+};
 
 template <class Type>
 Array<Type>::Array(int size)
@@ -94,22 +94,22 @@ Type Array<Type>::operator [] (int index) const
 template <class Type>
 void Array<Type>::PrintValues()
 {
-    for(int i = 0; i < this->GetSize(); i++)
+    for(int i = 0; i < this->getSize(); i++)
     {
-        std::cout << "The value at index " << i << " is " << this->[i] << endl;
+        std::cout << "The value at index " << i << " is " << internalArray[i] << std::endl;
     }
 }
 
 template <class Type>
 void Array<Type>::PrintValueAtIndex(int index)
 {
-    std::cout << "The value at index " << index << " is " << this->[index] << endl;
+    std::cout << "The value at index " << index << " is " << internalArray[index] << std::endl;
 }
 
 template <class Type>
-void Array<Type>::AddValueAtIndex(int index, Type value)
+void Array<Type>::setAtIndex(int index, Type value)
 {
-    this->[index] = value;
+    internalArray[index] = value;
 }
 
 
