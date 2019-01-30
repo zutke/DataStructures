@@ -28,7 +28,7 @@ public:
 
 // Template Definitions
 template <class Type>
-Node<Type> :: Node(){}
+Node<Type> :: Node(){} // Should never be called
 
 template <class Type>
 Node<Type> :: Node(Type data)
