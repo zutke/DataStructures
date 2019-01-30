@@ -9,14 +9,16 @@
 #ifndef Node_hpp
 #define Node_hpp
 
-#inlude <assert.h>
+#include <assert.h>
 
 template <class Type>
 class Node
 {
     Type data;
 public:
+    Node();
     Node(Type data);
+    void PrintData();
     /*
      Type getData();
      void setData(Type data);
@@ -32,6 +34,13 @@ template <class Type>
 Node<Type> :: Node(Type data)
 {
     this->data = data;
+}
+
+template <class Type>
+void Node<Type>::PrintData() {
+    Type data;
+    data = this->data;
+    std::cout << data << std::endl;
 }
 /*
 template <class Type>
