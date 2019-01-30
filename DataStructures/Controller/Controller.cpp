@@ -22,3 +22,12 @@ void Controller::usingNodes()
     wordHolder.PrintData();
     
 }
+
+void Controller::usingArrays()
+{
+    Array<int> myArray(5);
+    for (int i = 0; i < myArray.getSize(); i++) {
+        myArray.setAtIndex(i, i);
+    }
+    myArray.PrintValues();
+}

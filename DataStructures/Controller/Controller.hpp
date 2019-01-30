@@ -12,10 +12,12 @@
 #include <stdio.h>
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
+#include "../Model/Structures/Array.h"
 
 class Controller
 {
     void usingNodes();
+    void usingArrays();
 public:
     void start();
 };
