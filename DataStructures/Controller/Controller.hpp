@@ -11,9 +11,11 @@
 
 #include <stdio.h>
 #include <iostream>
+#include "../Model/Nodes/Node.hpp"
 
 class Controller
 {
+    void usingNodes();
 public:
     void start();
 };
