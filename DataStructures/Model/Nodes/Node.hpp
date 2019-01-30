@@ -19,7 +19,7 @@ public:
     Node();
     Node(Type data);
     void PrintData();
-    /*
+    /* Evil
      Type getData();
      void setData(Type data);
      */
