@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>10</x>
-      <y>10</y>
+      <y>0</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -23,7 +23,7 @@ bg=red</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>10</x>
-      <y>220</y>
+      <y>210</y>
       <w>390</w>
       <h>190</h>
     </coordinates>
@@ -42,7 +42,7 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>100</x>
-      <y>190</y>
+      <y>180</y>
       <w>30</w>
       <h>50</h>
     </coordinates>
@@ -53,7 +53,7 @@ bg=orange</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>470</x>
-      <y>220</y>
+      <y>210</y>
       <w>410</w>
       <h>230</h>
     </coordinates>
@@ -79,7 +79,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>300</y>
+      <y>290</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
