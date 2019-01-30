@@ -12,30 +12,47 @@
 #include <assert.h>
 
 template <class Type>
-class LinearNode
+class LinearNode : public Node<Type>
 {
-    Type data;
+    LinearNode<Type> * next;
 public:
     LinearNode();
     LinearNode(Type data);
-    void PrintData();
+    LinearNode(Type data, LinearNode<Type> * next);
+    /*
+    LinearNode<Type> * getNext();
+    void setNext(LinearNode<Type> * next);
+     */
 };
 
 
 // Template Definitions
 template <class Type>
-LinearNode<Type> :: LinearNode(){}
+LinearNode<Type> :: LinearNode() : Node() {} // Should never be called
 
 template <class Type>
-LinearNode<Type> :: LinearNode(Type data)
+LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data) // Calling Node<Type>(data) assigns data for us automatically, AKA no this->data = data below
 {
-    this->data = data;
+  //this->data = data;
+    this->next = nullptr; // If given no ptr in params, set to nullptr by default.
 }
 
 template <class Type>
-void LinearNode<Type>::PrintData() {
-    Type data;
-    data = this->data;
-    std::cout << data << std::endl;
+LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(data)
+{
+    this->next = next;
 }
+/*
+template<class Type>
+LinearNode<Type> * LinearNode<Type> :: getNext()
+{
+    return this->next;
+}
+
+template <class Type>
+void setNext(LinearNode<Type> * next)
+{
+    this->next = next;
+}
+ */
 #endif /* Node_hpp */
