@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+-data : Type
+
+--
++Node&lt;Type&gt;(): constr
++Node&lt;Type&gt;(Type): constr
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>220</y>
+      <w>390</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>LinearNode&lt;Type&gt;
+--
+- next : Node&lt;Type&gt; *
+
+--
++LinearNode&lt;Type&gt;() : constr
++LinearNode&lt;Type&gt;(Type) : constr
++LinearNode&lt;Type&gt;(Type, LinearNode&lt;Type&gt; : constr
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>190</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>220</y>
+      <w>410</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Array&lt;Type&gt;
+--
+- size : int
+- front : LinearNode&lt;Type&gt; *
+--
++Array&lt;Type&gt;(int size) : constr
++Array&lt;Type&gt;(Array&lt;Type&gt; array) : constr
++PrintValues() : void
++PrintValueAtIndex(int index) : void
++AddValueAtIndex(int index, Array&lt;Type&gt; array) : void
++GiveSize(Array&lt;Type&gt; array) : int
++ operator []
++ operator = Array&lt;Type&gt; &amp;
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>300</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+</diagram>
