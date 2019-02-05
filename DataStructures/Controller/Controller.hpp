@@ -16,8 +16,6 @@
 
 class Controller
 {
-    void usingNodes();
-    void usingArrays();
 public:
     void start();
 };
