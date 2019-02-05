@@ -11,107 +11,105 @@
 #include <assert.h>
 #include <iostream>
 
-template <class Type>
+template<class T>
 class Array
 {
-    Type * internalArray;
+    T * internalArray;
     int size;
 public:
-    Array<Type>(int size);
-    Array<Type>(const Array<Type> & toCopy); // Copy another array
-    ~Array<Type>();
+    Array<T>(int size);
+    Array<T>(const Array<T> & toCopy);
+    ~Array<T>();
     
-    Array<Type> & operator = (const Array<Type> & toReplace);
-    Type& operator [] (int index);
-    Type operator [] (int index) const;
+    Array<T> & operator = (const Array<T> & toReplace);
+    T& operator [] (int index);
+    T operator [] (int index) const;
     
-    void PrintValues();
-    void PrintValueAtIndex(int index);
-    void setAtIndex(int index, Type value);
-    int getSize();
+    int getSize() const;
+    T getFromIndex(int index);
+    void setAtIndex(int index, T data);
 };
 
-template <class Type>
-Array<Type>::Array(int size)
+template<class T>
+Array<T> :: Array(int size)
 {
     assert(size > 0);
     this->size = size;
     
-    internalArray = new Type[size];
+    internalArray = new T[size];
 }
 
-template <class Type>
-Array<Type>::Array(const Array<Type> & toCopy)
+template<class T>
+Array<T> :: Array(const Array<T> & toCopy)
 {
-    this->size = toCopy.GetSize()();
-    internalArray = new Type[size];
+    this->size = toCopy.getSize();
+    
+    internalArray = new T[size];
     
     for(int i = 0; i < size; i++)
     {
-        internalArray[index] = toCopy[index];
+        internalArray[i] = toCopy[i];
     }
 }
 
-template <class Type>
-Array<Type>::~Array()
+template<class T>
+Array<T> :: ~Array()
 {
     delete [] internalArray;
 }
 
-template <class Type>
-Array<Type>& Array<Type>::operator = (const Array<Type> & toAssign)
+template<class T>
+Array<T> & Array<T> :: operator = (const Array<T> & toAssign)
 {
     if(&toAssign != this)
     {
-        if(size != toAssign.GetSize()())
+        if(size != toAssign.getSize())
         {
             delete [] internalArray;
-            size = toAssign.GetSize()();
-            internalArray = new Type[size];
+            size = toAssign.getSize();
+            internalArray = new T[size];
         }
         
         for(int i = 0; i < size; i++)
         {
-            internalArray[index] = toAssign[index];
+            internalArray[i] = toAssign[i];
         }
     }
     return *this;
 }
 
-template <class Type>
-Type& Array<Type>::operator [] (int index)
+template <class T>
+T & Array<T> :: operator [] (int index)
 {
     assert(index >= 0 && index < size);
     return internalArray[index];
 }
-template <class Type>
-Type Array<Type>::operator [] (int index) const
+template <class T>
+T Array<T> :: operator [] (int index) const
 {
     assert(index >= 0 && index < size);
     return internalArray[index];
 }
 
-template <class Type>
-void Array<Type>::PrintValues()
+template <class T>
+int Array<T> :: getSize() const
 {
-    for(int i = 0; i < this->getSize(); i++)
-    {
-        std::cout << "The value at index " << i << " is " << internalArray[i] << std::endl;
-    }
+    return size;
 }
-
-template <class Type>
-void Array<Type>::PrintValueAtIndex(int index)
+template <class T>
+T Array<T> :: getFromIndex(int index)
 {
-    std::cout << "The value at index " << index << " is " << internalArray[index] << std::endl;
+    assert(index >= 0 && index < size);
+    
+    T value = internalArray[index];
+    
+    return value;
 }
-
-template <class Type>
-void Array<Type>::setAtIndex(int index, Type value)
+template <class T>
+void Array<T> :: setAtIndex(int pos, T item)
 {
-    internalArray[index] = value;
+    assert(pos >= 0 && pos < size);
+    internalArray[pos] = item;
 }
-
-
 
 #endif /* Array_h */

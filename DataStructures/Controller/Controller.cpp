@@ -7,6 +7,7 @@
 //
 
 #include "Controller.hpp"
+#include "Timer.hpp"
 
 void Controller::start()
 {
@@ -29,5 +30,4 @@ void Controller::usingArrays()
     for (int i = 0; i < myArray.getSize(); i++) {
         myArray.setAtIndex(i, i);
     }
-    myArray.PrintValues();
 }
