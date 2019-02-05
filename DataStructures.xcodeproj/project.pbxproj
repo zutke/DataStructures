@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB74C3C62209DB77000A9E3C /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB74C3C42209DB77000A9E3C /* Timer.cpp */; };
 		FBF3601921FF5D8A00158EEB /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBF3601721FF5D8A00158EEB /* Controller.cpp */; };
 		FBF3601C21FF5EC000158EEB /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBF3601B21FF5EC000158EEB /* Runner.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FB74C3C42209DB77000A9E3C /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		FB74C3C52209DB77000A9E3C /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		FB7DB41E2201F8CC00EDC1EE /* LinearNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearNode.h; sourceTree = "<group>"; };
 		FB7DB420220204C500EDC1EE /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
 		FBF3600921FF5B4C00158EEB /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +111,8 @@
 		FBF3601521FF5BDB00158EEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FB74C3C42209DB77000A9E3C /* Timer.cpp */,
+				FB74C3C52209DB77000A9E3C /* Timer.hpp */,
 				FB7DB41F220204AB00EDC1EE /* Structures */,
 				FB7DB41D2201F0C900EDC1EE /* Nodes */,
 			);
@@ -177,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB74C3C62209DB77000A9E3C /* Timer.cpp in Sources */,
 				FBF3601921FF5D8A00158EEB /* Controller.cpp in Sources */,
 				FBF3601C21FF5EC000158EEB /* Runner.cpp in Sources */,
 			);
