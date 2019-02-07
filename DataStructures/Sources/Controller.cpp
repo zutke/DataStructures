@@ -6,10 +6,11 @@
 //  Copyright © 2019 Zachary Gutke. All rights reserved.
 //
 
-#include "Controller.hpp"
-#include "Timer.hpp"
+#include "../Headers/Controller.hpp"
 
 void Controller::start()
 {
+    FileController fc;
+    fc.testFiles();
     std::cout << "Welcome to the Data Structures App." << std::endl;
 };

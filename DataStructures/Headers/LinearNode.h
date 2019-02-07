@@ -10,13 +10,14 @@
 #define LinearNode_hpp
 
 #include <assert.h>
+#include "../Headers/Node.hpp"
 
 template <class Type>
 class LinearNode : public Node<Type>
 {
     LinearNode<Type> * next;
 public:
-    LinearNode();
+    //LinearNode();
     LinearNode(Type data);
     LinearNode(Type data, LinearNode<Type> * next);
     /*
@@ -27,8 +28,8 @@ public:
 
 
 // Template Definitions
-template <class Type>
-LinearNode<Type> :: LinearNode() : Node() {} // Should never be called
+//template <class Type>
+//LinearNode<Type> :: LinearNode() : Node() {} // Should never be called
 
 template <class Type>
 LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data) // Calling Node<Type>(data) assigns data for us automatically, AKA no this->data = data below

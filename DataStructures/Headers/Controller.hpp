@@ -11,8 +11,8 @@
 
 #include <stdio.h>
 #include <iostream>
-#include "../Model/Nodes/Node.hpp"
-#include "../Model/Structures/Array.h"
+#include "../Headers/Node.hpp"
+#include "../Headers/FileController.hpp"
 
 class Controller
 {
