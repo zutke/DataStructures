@@ -16,6 +16,8 @@
 --
 +Node&lt;Type&gt;(): constr
 +Node&lt;Type&gt;(Type): constr
+{get; set;}
+
 bg=red</panel_attributes>
     <additional_attributes/>
   </element>
@@ -35,6 +37,8 @@ bg=red</panel_attributes>
 +LinearNode&lt;Type&gt;() : constr
 +LinearNode&lt;Type&gt;(Type) : constr
 +LinearNode&lt;Type&gt;(Type, LinearNode&lt;Type&gt; : constr
+{get; set;}
+
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
@@ -57,34 +61,19 @@ bg=orange</panel_attributes>
       <w>410</w>
       <h>230</h>
     </coordinates>
-    <panel_attributes>Array&lt;Type&gt;
+    <panel_attributes>Array&lt;T&gt;
 --
 - size : int
-- front : LinearNode&lt;Type&gt; *
+- front : LinearNode&lt;T&gt; *
 --
-+Array&lt;Type&gt;(int size) : constr
-+Array&lt;Type&gt;(Array&lt;Type&gt; array) : constr
-+PrintValues() : void
-+PrintValueAtIndex(int index) : void
-+AddValueAtIndex(int index, Array&lt;Type&gt; array) : void
-+GiveSize(Array&lt;Type&gt; array) : int
++Array&lt;T&gt;(int size) : constr
++Array&lt;T&gt;(Array&lt;T&gt; array) : constr
++~Array&lt;T&gt;();
 + operator []
 + operator = Array&lt;Type&gt; &amp;
-+ ~Array() : destr
+{get; set;}
 
 bg=yellow</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>390</x>
-      <y>290</y>
-      <w>100</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-m1=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
   </element>
 </diagram>
