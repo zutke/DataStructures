@@ -157,5 +157,9 @@ T CircularList<T>::remove(int index)
     delete removed;
     return value;
 }
-
+template<class T>
+int CircularList<T>::getSize() const
+{
+    return this->size;
+}
 #endif /* CircularList_h */
