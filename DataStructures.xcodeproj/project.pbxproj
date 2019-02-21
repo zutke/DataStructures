@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		FB1979EA221EF055009B16DC /* DoubleNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleNode.h; sourceTree = "<group>"; };
 		FB1979EB221EF7FF009B16DC /* CircularList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularList.h; sourceTree = "<group>"; };
+		FB1979EC221EFE9F009B16DC /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 		FB74C3C42209DB77000A9E3C /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		FB74C3C52209DB77000A9E3C /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		FB7DB41E2201F8CC00EDC1EE /* LinearNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearNode.h; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 				FB74C3C52209DB77000A9E3C /* Timer.hpp */,
 				FB1979EA221EF055009B16DC /* DoubleNode.h */,
 				FB1979EB221EF7FF009B16DC /* CircularList.h */,
+				FB1979EC221EFE9F009B16DC /* LinkedList.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
