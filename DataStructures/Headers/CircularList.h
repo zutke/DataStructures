@@ -124,5 +124,38 @@ void CircularList<T>::addAtIndex(int index, T item)
     next->setPrev(addMe);
     this->size++;
 }
+template<class T>
+T CircularList<T>::getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->size);
+    DoubleNode<T> * holder = findNode(index);
+    return holder->getData();
+}
+template<class T>
+T CircularList<T>::remove(int index)
+{
+    assert(index >= 0 && index < this->size); DoubleNode<T> * removed = findNode(index);
+    DoubleNode<T> * removedPrev = removed->getPrev();
+    DoubleNode<T> * removedNext = removed->getNext();
+    
+    if(index == 0)
+    {
+        this->front = removedNext;
+        this->end->setNext(removedNext);
+    }
+    if(index == this->size - 1)
+    {
+        this->end = removedPrev;
+        this->front->setPrev(removedPrev);
+    }
+    
+    removedPrev->setNext(removedNext);
+    removedNext->setPrev(removedPrev);
+    
+    T value = removed->getData();
+    this->size--;
+    delete removed;
+    return value;
+}
 
 #endif /* CircularList_h */
