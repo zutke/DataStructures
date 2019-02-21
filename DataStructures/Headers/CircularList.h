@@ -89,5 +89,40 @@ void CircularList<T>::add(T item)
     this->end = addedNode;
     this->size++;
 }
+template<class T>
+void CircularList<T>::addAtIndex(int index, T item)
+{
+    assert(index >= 0 && index <= this->size);
+    
+    DoubleNode<T> * next;
+    DoubleNode<T> * prev;
+    DoubleNode<T> * addMe;
+    
+    if(index < this->size)
+    {
+        next = findNode(index);
+        prev = next->getPrev();
+    }
+    else if(index == this->size)
+    {
+        next = this->front;
+        prev = this->end;
+    }
+    
+    addMe = new DoubleNode<T>(item, prev, next);
+    
+    if(index == 0)
+    {
+        this->front = addMe;
+    }
+    else if (index == this->size)
+    {
+        this->end = addMe;
+    }
+    
+    prev->setNext(addMe);
+    next->setPrev(addMe);
+    this->size++;
+}
 
 #endif /* CircularList_h */
