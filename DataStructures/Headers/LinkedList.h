@@ -31,5 +31,23 @@ public:
     virtual T remove(int index);
 };
 
+template<class T>
+LinkedList<T>::LinkedList()
+{
+    this->front = nullptr;
+    this->end = nullptr;
+    this->size = 0;
+}
+template<class T>
+LinkedList<T>::~LinkedList()
+{
+    LinearNode<T> * destroyStruct = front;
+    while(front != nullptr)
+    {
+        front = destroyStruct->getNextNode();
+        delete destroyStruct;
+        destroyStruct = front;
+    }
+}
 
 #endif /* LinkedList_h */
