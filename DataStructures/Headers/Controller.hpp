@@ -18,6 +18,7 @@ class Controller
 {
 public:
     void start();
+    void testFiles();
 };
 
 #endif /* Controller_hpp */

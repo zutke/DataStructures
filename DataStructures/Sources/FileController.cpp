@@ -73,18 +73,3 @@ vector<Music> FileController::readMusicDataToVector(string filename) // Same as 
     }
     return musicVector;
 }
-
-void FileController::testFiles()
-{
-    vector<CrimeData> vecCrime = readCrimeDataToVector("../Resources/crime.csv");
-    vector<Music> vecMusic = readMusicDataToVector("../Resources/music.csv");
-    
-    for(int i = 0; i < vecCrime.size(); i++)
-    {
-        cout << "Index " << i << " contains " << vecCrime.at(i) << endl;
-    }
-    for(int i = 0; i < vecMusic.size(); i++)
-    {
-        cout << "Index " << i << " contains " << vecMusic.at(i) << endl;
-    }
-}
