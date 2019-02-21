@@ -14,6 +14,7 @@
 #include "../Headers/Node.hpp"
 #include "../Headers/FileController.hpp"
 #include "../Headers/CircularList.h"
+#include "../Headers/LinkedList.h"
 
 class Controller
 {

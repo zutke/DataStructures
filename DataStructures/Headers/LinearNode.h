@@ -49,7 +49,7 @@ LinearNode<Type> * LinearNode<Type> :: getNext()
 }
 
 template <class Type>
-void setNext(LinearNode<Type> * next)
+void LinearNode<Type>::setNext(LinearNode<Type> * next)
 {
     this->next = next;
 }

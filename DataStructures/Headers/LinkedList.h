@@ -17,7 +17,7 @@ class LinkedList : public List<T>
 {
 protected:
     LinearNode<T> * front:
-    LinearNode<T> *end;
+    LinearNode<T> * end;
 public:
     LinkedList();
     virtual ~LinkedList();
@@ -73,7 +73,7 @@ void LinkedList<T>::addAtIndex(int index,T item)
     assert(index >= 0 && index <= this->size);
     if(index == this->size)
     {
-        add(item)
+        add(item);
     }
     else
     {
@@ -98,5 +98,77 @@ void LinkedList<T>::addAtIndex(int index,T item)
         this->size++;
     }
 }
+template<class T>
+T LinkedList<T>::getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->size);
+    T data;
+    
+    LinearNode<T> * current = front;
+    
+    for(int pos=0;pos < index;++pos)
+    {
+        current = current->getNextNode();
+    }
+    
+    data =  current->getData();
+    
+    return data;
+}
+template<class T>
+T LinkedList<T>::remove(int index)
+{
+    assert(index >= 0 && index < this->size);
+    
+    LinearNode<T> * current = front;
+    LinearNode<T> * toBeRemoved = nullptr;
+    LinearNode<T> * prev = nullptr;
+    
+    T removedData;
+    
+    if(index == 0)
+    {
+        toBeRemoved = front;
+        this->front = this->front->getNextNode();
+    }
+    else
+    {
+        for(int pos = 0; pos < index; ++pos)
+        {
+            prev = current;
+            current = current->getNextNode();
+        }
+        
+        toBeRemoved = current;
+        if (index == this->size - 1) {
+            prev->setNextNode(nullptr);
+            end = prev;
+        } else {
+            current = toBeRemoved->getNextNode();
+            prev->setNextNode(current);
+        }
+    }
+    this->size -= 1;
+    
+    removedData = toBeRemoved->getData();
+    delete toBeRemoved;
+    return removedData;
+}
+template<class T>
+LinearNode<T> * LinkedList<T>::getEnd()
+{
+    return this->end;
+}
+template<class T>
+LinearNode<T> * LinkedList<T>::getFront()
+{
+    return this->front;
+}
+template<class T>
+int LinkedList<T>::getSize() const
+{
+    return this->size;
+}
+
 
 #endif /* LinkedList_h */
