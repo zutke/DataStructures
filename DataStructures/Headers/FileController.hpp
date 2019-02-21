@@ -16,6 +16,7 @@
 #include <sstream>
 #include "../Headers/Music.hpp"
 #include "../Headers/CrimeData.hpp"
+#include "../Headers/LinkedList.h"
 
 
 using namespace std;
@@ -26,6 +27,7 @@ class FileController
 public:
     static vector<CrimeData> readCrimeDataToVector(string filename);
     static vector<Music> readMusicDataToVector(string filename);
+    static LinkedList<CrimeData> readDataToList(string filename);
 };
 
 #endif /* FileController_hpp */

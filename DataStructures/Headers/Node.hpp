@@ -20,10 +20,8 @@ public:
     Node();
     Node(Type data);
     void PrintData();
-    /* Evil
      Type getData();
      void setData(Type data);
-     */
 };
 
 
@@ -43,7 +41,6 @@ void Node<Type>::PrintData() {
     data = this->data;
     std::cout << data << std::endl;
 }
-/*
 template <class Type>
 Type Node<Type> :: getData()
 {
@@ -53,6 +50,5 @@ template <class Type>
 void Node<Type> :: setData(Type data) {
     this->data = data;
 }
-*/
 
 #endif /* Node_hpp */

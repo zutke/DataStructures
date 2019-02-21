@@ -73,3 +73,36 @@ vector<Music> FileController::readMusicDataToVector(string filename) // Same as 
     }
     return musicVector;
 }
+
+LinkedList<CrimeData> FileController::readDataToList(string filename)
+{
+    LinkedList<CrimeData> crimes;
+    string currentCSVLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(filename);
+    
+    if(dataFile.is_open()) // If the file exists
+    {
+        while(!dataFile.eof()) // While not the end of the file
+        {
+            getline(dataFile, currentCSVLine, '\r'); // Grab each line from the file and return.
+            if(rowCount != 0) // Exclude header row
+            {
+                if(currentCSVLine.length() != 0) // Exclude blank lines
+                {
+                    // Create CrimeData from row and add to vector
+                    CrimeData row(currentCSVLine);
+                    crimes.add(row);
+                }
+            }
+            rowCount++;
+        }
+        dataFile.close();
+    }
+    else
+    {
+        cerr << "ERROR: No file found" << endl;
+    }
+    return crimes;
+}
