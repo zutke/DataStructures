@@ -16,7 +16,7 @@ template<class T>
 class LinkedList : public List<T>
 {
 protected:
-    LinearNode<T> * front:
+    LinearNode<T> * front;
     LinearNode<T> * end;
 public:
     LinkedList();
