@@ -49,5 +49,54 @@ LinkedList<T>::~LinkedList()
         destroyStruct = front;
     }
 }
+template<class T>
+void LinkedList<T>::add(T item)
+{
+    LinearNode<T> * newData = new LinearNode<T>(item);
+    
+    if(this->size == 0)
+    {
+        this->front = newData;
+    }
+    else
+    {
+        this->end->setNextNode(newData);
+    }
+    
+    this->end = newData;
+    
+    this ->size += 1;
+}
+template<class T>
+void LinkedList<T>::addAtIndex(int index,T item)
+{
+    assert(index >= 0 && index <= this->size);
+    if(index == this->size)
+    {
+        add(item)
+    }
+    else
+    {
+        LinearNode<T> * toBeAdded = new LinearNode<T>(item);
+        if(index == 0)
+        {
+            toBeAdded->setNextNode(front);
+            front = toBeAdded;
+        }
+        else
+        {
+            LinearNode<T> * prev = nullptr;
+            LinearNode<T> * current = front;
+            for(int pos = 0;pos < index;++pos)
+            {
+                prev = current;
+                current = current->getNextNode();
+            }
+            prev->setNextNode(toBeAdded);
+            toBeAdded->setNextNode(current);
+        }
+        this->size++;
+    }
+}
 
 #endif /* LinkedList_h */
