@@ -13,6 +13,7 @@
 #include <iostream>
 #include "../Headers/Node.hpp"
 #include "../Headers/FileController.hpp"
+#include "../Headers/CircularList.h"
 
 class Controller
 {

@@ -26,19 +26,19 @@ public:
 };
 
 template <class T>
-DoubleNode<T>::DoubleNode<T>() : Node<T>()
+DoubleNode<T>::DoubleNode() : Node<T>()
 {
     next = nullptr;
     prev = nullptr;
 }
 template<class T>
-DoubleNode<T>::DoubleNode<T>(T data) : Node<T>(data)
+DoubleNode<T>::DoubleNode(T data) : Node<T>(data)
 {
     next = nullptr;
     prev = nullptr;
 }
 template<class T>
-DoubleNode<T>::DoubleNode<T>(T data,DoubleNode<T>* next,DoubleNode<T>* prev) Node<T>(data)
+DoubleNode<T>::DoubleNode(T data,DoubleNode<T>* next,DoubleNode<T>* prev) : Node<T>(data)
 {
     this->next = next;
     this->prev = prev;

@@ -12,6 +12,7 @@ void Controller::start()
 {
     Controller c;
     c.testFiles();
+    //CircularList<int> list();
     std::cout << "Welcome to the Data Structures App." << std::endl;
 };
 
